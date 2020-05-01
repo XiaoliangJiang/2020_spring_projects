@@ -13,7 +13,8 @@ I have kept all of the basic rules as follows:
 3. The number of tents in each row and column matches the numbers around the edge of the grid
 
 An example of solved original tent puzzle game:
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp1.jpeg" width="900px" />
+
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp1.jpeg">
 
 In addition, I have added some variations to the original puzzle.
 1. The first variation is each tent must have a door to go outside and view the landscape. So, it must open to an empty space and no other tent on its view (in a line). For example, the tent on the left top can only open the door to the right (assuming boundary is not available for opening a door)
