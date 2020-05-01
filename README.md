@@ -1,4 +1,35 @@
 # IS590PZ 2020 Spring Student Projects
+Xiaoliang Jiang,05/01/2020
+
+## Introduction
+In this project I have devised a variation of existing puzzle: tent. My program is able to randomly generate many puzzles in the variation type and guarantee only one valid solution exists. It also provides solutions for player to check their answer.
+
+## Ideas of variation
+For the classic tent puzzle, you may find instructions from this link: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/tents.html
+
+I have kept all of the basic rules as follows:
+1. Place tents in the empty squares.
+2. No two tents are adjacent, even diagonally
+3. The number of tents in each row and column matches the numbers around the edge of the grid
+
+An example of solved original tent puzzle game:
+<img src="https://learn.illinois.edu/pluginfile.php/5882331/mod_forum/post/8388810/tent_example.png" width="900px" />
+
+In addition, I have added some variations to the original puzzle.
+
+1. The first variation is each tent must have a door to go outside and view the landscape. So, it must open to an empty space and no other tent on its view (in a line). 
+2. Secondly, the boundaries are not valid scenes for the owner of tents. 
+3. Finally, add some ruins on the puzzle. They may be abandoned tents from previous visitor which locate as regular tents but cannot be used any more. New tents cannot build on the ruins and ruins cannot treat as scenes as well. Therefore, tents’ doors cannot open to the ruins which are like dead tents: they are not calculated in hints number but can block the view.
+
+## Methods:
+1.Randomly generate trees on the puzzle board.
+2.Add tent as more as possible based on the original criteria (No two tents are adjacent, even diagonally). 
+3.For each tent, trying to find possible directions to open the door. If and only if one direction is available, set the tent to this direction.
+4.Add ruins to make the puzzle valid and only have one solution. (Originally, my variation may contain several possible solutions, however, after I have added ruins to the puzzle, it only has one solution. It would be better if I use brute-force or other algorithm to solve the puzzle and check the number of answers. However, due to time limitation, I did not complete this part.)
+5.calculate the hints number.
+
+# Appendix 
+# Introduction of IS590PZ 2020 Spring Student Projects
 Student final projects from this semester are all public forks linked from this repository.  This is just one of the assignments students worked on for the course, but this is the only one they are permitted to publish openly.
 
 ## Final Project Expectations:
