@@ -13,26 +13,26 @@ I have kept all of the basic rules as follows:
 3. The number of tents in each row and column matches the numbers around the edge of the grid
 
 An example of solved original tent puzzle game:
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp1.jpeg?raw=true" width="900px" />
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp1.jpeg" width="900px" />
 
 In addition, I have added some variations to the original puzzle.
 1. The first variation is each tent must have a door to go outside and view the landscape. So, it must open to an empty space and no other tent on its view (in a line). For example, the tent on the left top can only open the door to the right (assuming boundary is not available for opening a door)
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp2.png?raw=true" width="900px" />
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp2.png" width="900px" />
 2. Secondly, the boundaries are not valid scenes for the owner of tents. For example, the tent in the left puzzle can only open the door to the left, since boundary is on the top and another tent is on its right. 
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp3.png?raw=true" width="900px" />
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp3.png" width="900px" />
 
 3. Finally, add some ruins on the puzzle. They may be abandoned tents from previous visitor which locate as regular tents but cannot be used any more. New tents cannot build on the ruins and ruins cannot treat as scenes as well. Therefore, tents’ doors cannot open to the ruins which are like dead tents: they are not calculated in hints number but can block the view.
 
 Here is a sample puzzle board. T means trees and R represent ruins:
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp4.png?raw=true" width="900px" />
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp4.png" width="900px" />
 Here is an example about the answer of the puzzle. Lower case letters means the directions of tents, r: right, l: left, u: up, d: down,
-<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp5.png?raw=true" width="900px" />
+<img src=https://github.com/XiaoliangJiang/2020_spring_projects/blob/master/fp5.png" width="900px" />
 ## Methods:
-1.Randomly generate trees on the puzzle board.
-2.Add tent as more as possible based on the original criteria (No two tents are adjacent, even diagonally). 
-3.For each tent, trying to find possible directions to open the door. If and only if one direction is available, set the tent to this direction.
-4.Add ruins to make the puzzle valid and only have one solution. (Originally, my variation may contain several possible solutions, however, after I have added ruins to the puzzle, it only has one solution. It would be better if I use brute-force or other algorithm to solve the puzzle and check the number of answers. However, due to time limitation, I did not complete this part.)
-5.calculate the hints number.
+1. Randomly generate trees on the puzzle board.
+2. Add tent as more as possible based on the original criteria (No two tents are adjacent, even diagonally). 
+3. For each tent, trying to find possible directions to open the door. If and only if one direction is available, set the tent to this direction.
+4. Add ruins to make the puzzle valid and only have one solution. (Originally, my variation may contain several possible solutions, however, after I have added ruins to the puzzle, it only has one solution. It would be better if I use brute-force or other algorithm to solve the puzzle and check the number of answers. However, due to time limitation, I did not complete this part.)
+5. calculate the hints number.
 
 # Appendix 
 # Introduction of IS590PZ 2020 Spring Student Projects
